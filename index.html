@@ -1,0 +1,308 @@
+export default function DigitalMarketingLandingPage() {
+  const services = [
+    {
+      title: 'SEO Optimization',
+      description:
+        'Boost your website ranking and increase organic traffic with advanced SEO strategies.',
+      icon: '📈',
+    },
+    {
+      title: 'Social Media Marketing',
+      description:
+        'Engage your audience and grow your brand across all major social media platforms.',
+      icon: '📱',
+    },
+    {
+      title: 'Content Creation',
+      description:
+        'High-quality content that attracts customers and builds trust for your business.',
+      icon: '✍️',
+    },
+    {
+      title: 'Paid Advertising',
+      description:
+        'Run high-converting ad campaigns on Google, Meta, and other platforms.',
+      icon: '💰',
+    },
+  ];
+
+  const testimonials = [
+    {
+      name: 'Aarav Sharma',
+      company: 'TechNova',
+      review:
+        'This agency transformed our online presence. Our leads increased by 3x within just two months.',
+    },
+    {
+      name: 'Riya Mehta',
+      company: 'StyleHive',
+      review:
+        'Professional team, amazing creativity, and excellent communication throughout the project.',
+    },
+    {
+      name: 'Kabir Singh',
+      company: 'FitLife',
+      review:
+        'Their marketing strategies helped us scale our startup faster than expected.',
+    },
+  ];
+
+  return (
+    <div className="min-h-screen bg-white text-gray-800 font-sans">
+      {/* Navbar */}
+      <header className="flex items-center justify-between px-8 py-5 shadow-sm sticky top-0 bg-white z-50">
+        <h1 className="text-2xl font-bold tracking-tight">
+          Growth<span className="text-blue-600">Spark</span>
+        </h1>
+
+        <nav className="hidden md:flex gap-8 text-sm font-medium">
+          <a href="#services" className="hover:text-blue-600 transition">
+            Services
+          </a>
+          <a href="#about" className="hover:text-blue-600 transition">
+            About
+          </a>
+          <a href="#testimonials" className="hover:text-blue-600 transition">
+            Testimonials
+          </a>
+          <a href="#contact" className="hover:text-blue-600 transition">
+            Contact
+          </a>
+        </nav>
+
+        <button className="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-xl shadow-lg transition">
+          Get Started
+        </button>
+      </header>
+
+      {/* Hero Section */}
+      <section className="grid lg:grid-cols-2 gap-10 items-center px-8 lg:px-20 py-20 bg-gradient-to-r from-blue-50 to-white">
+        <div>
+          <p className="text-blue-600 font-semibold mb-4 uppercase tracking-widest">
+            Digital Marketing Agency
+          </p>
+
+          <h2 className="text-5xl font-extrabold leading-tight mb-6">
+            Grow Your Business With Smart Digital Marketing
+          </h2>
+
+          <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+            We help startups and businesses build strong online visibility,
+            generate quality leads, and increase revenue using modern
+            marketing strategies.
+          </p>
+
+          <div className="flex gap-4 flex-wrap">
+            <button className="bg-blue-600 hover:bg-blue-700 text-white px-7 py-3 rounded-2xl shadow-xl transition">
+              Start Your Journey
+            </button>
+
+            <button className="border border-gray-300 hover:border-blue-600 hover:text-blue-600 px-7 py-3 rounded-2xl transition">
+              Learn More
+            </button>
+          </div>
+        </div>
+
+        <div className="relative">
+          <div className="bg-blue-600 rounded-[2rem] p-8 shadow-2xl">
+            <img
+              src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop"
+              alt="Digital Marketing Team"
+              className="rounded-2xl object-cover h-[450px] w-full"
+            />
+          </div>
+
+          <div className="absolute -bottom-6 -left-6 bg-white shadow-xl rounded-2xl p-5">
+            <h3 className="font-bold text-2xl">500+</h3>
+            <p className="text-gray-500 text-sm">Successful Campaigns</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Services */}
+      <section id="services" className="px-8 lg:px-20 py-20 bg-gray-50">
+        <div className="text-center mb-16">
+          <p className="text-blue-600 font-semibold uppercase tracking-widest mb-3">
+            Our Services
+          </p>
+          <h2 className="text-4xl font-bold mb-4">
+            Powerful Marketing Solutions
+          </h2>
+          <p className="text-gray-600 max-w-2xl mx-auto">
+            We provide complete digital marketing services designed to help
+            businesses achieve measurable growth.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className="bg-white p-8 rounded-3xl shadow-md hover:shadow-2xl hover:-translate-y-2 transition duration-300"
+            >
+              <div className="text-5xl mb-5">{service.icon}</div>
+              <h3 className="text-xl font-bold mb-3">{service.title}</h3>
+              <p className="text-gray-600 leading-relaxed">
+                {service.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section
+        id="about"
+        className="grid lg:grid-cols-2 gap-14 items-center px-8 lg:px-20 py-20"
+      >
+        <div>
+          <img
+            src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop"
+            alt="About Company"
+            className="rounded-[2rem] shadow-2xl"
+          />
+        </div>
+
+        <div>
+          <p className="text-blue-600 font-semibold uppercase tracking-widest mb-3">
+            About Us
+          </p>
+
+          <h2 className="text-4xl font-bold mb-6">
+            We Build Brands That Stand Out
+          </h2>
+
+          <p className="text-gray-600 leading-relaxed mb-6 text-lg">
+            GrowthSpark is a modern digital marketing startup focused on
+            helping brands grow online with innovative strategies, data-driven
+            campaigns, and creative storytelling.
+          </p>
+
+          <div className="grid grid-cols-2 gap-6 mb-8">
+            <div className="bg-blue-50 p-5 rounded-2xl">
+              <h3 className="text-3xl font-bold text-blue-600">5+</h3>
+              <p className="text-gray-600">Years Experience</p>
+            </div>
+
+            <div className="bg-blue-50 p-5 rounded-2xl">
+              <h3 className="text-3xl font-bold text-blue-600">200+</h3>
+              <p className="text-gray-600">Happy Clients</p>
+            </div>
+          </div>
+
+          <button className="bg-blue-600 hover:bg-blue-700 text-white px-7 py-3 rounded-2xl shadow-lg transition">
+            Discover More
+          </button>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section
+        id="testimonials"
+        className="px-8 lg:px-20 py-20 bg-gradient-to-r from-blue-600 to-indigo-700 text-white"
+      >
+        <div className="text-center mb-16">
+          <p className="uppercase tracking-widest font-semibold mb-3">
+            Testimonials
+          </p>
+          <h2 className="text-4xl font-bold mb-4">
+            What Our Clients Say
+          </h2>
+          <p className="max-w-2xl mx-auto text-blue-100">
+            Trusted by startups and businesses worldwide for delivering real
+            marketing results.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8">
+          {testimonials.map((testimonial, index) => (
+            <div
+              key={index}
+              className="bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/20"
+            >
+              <p className="leading-relaxed text-blue-50 mb-6">
+                “{testimonial.review}”
+              </p>
+
+              <div>
+                <h3 className="font-bold text-xl">{testimonial.name}</h3>
+                <p className="text-blue-200 text-sm">
+                  {testimonial.company}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Contact */}
+      <section id="contact" className="px-8 lg:px-20 py-20 bg-gray-50">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <p className="text-blue-600 font-semibold uppercase tracking-widest mb-3">
+              Contact Us
+            </p>
+
+            <h2 className="text-4xl font-bold mb-6">
+              Let’s Grow Your Brand Together
+            </h2>
+
+            <p className="text-gray-600 leading-relaxed mb-8">
+              Have a project in mind? Reach out to us and let’s create powerful
+              marketing strategies for your business.
+            </p>
+
+            <div className="space-y-4 text-lg">
+              <p>📍 New Delhi, India</p>
+              <p>📞 +91 98765 43210</p>
+              <p>✉️ hello@growthspark.com</p>
+            </div>
+          </div>
+
+          <div className="bg-white p-8 rounded-[2rem] shadow-2xl">
+            <form className="space-y-5">
+              <input
+                type="text"
+                placeholder="Your Name"
+                className="w-full border border-gray-300 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+
+              <input
+                type="email"
+                placeholder="Your Email"
+                className="w-full border border-gray-300 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+
+              <textarea
+                rows="5"
+                placeholder="Your Message"
+                className="w-full border border-gray-300 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              ></textarea>
+
+              <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-xl font-semibold shadow-lg transition">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-gray-900 text-gray-300 px-8 lg:px-20 py-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p>© 2026 GrowthSpark. All rights reserved.</p>
+
+        <div className="flex gap-6">
+          <a href="#" className="hover:text-white transition">
+            Instagram
+          </a>
+          <a href="#" className="hover:text-white transition">
+            LinkedIn
+          </a>
+          <a href="#" className="hover:text-white transition">
+            Twitter
+          </a>
+        </div>
+      </footer>
+    </div>
+  );
+}
